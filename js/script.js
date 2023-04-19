@@ -2,14 +2,14 @@
 let map
 
 async function initMap() {
-  // The location of Uluru
-  const position = { lat: -25.344, lng: 131.031 }
+  // The location of Chicago
+  const position = { lat: 41.8781, lng: 87.6298 }
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary('maps')
   const { AdvancedMarkerView } = await google.maps.importLibrary('marker')
 
-  // The map, centered at Uluru
+  // The map, centered at Chicago
   map = new Map(document.getElementById('map'), {
     zoom: 4,
     center: position,
@@ -20,7 +20,7 @@ async function initMap() {
   const marker = new AdvancedMarkerView({
     map: map,
     position: position,
-    title: 'Uluru',
+    title: 'Chicago',
   })
 }
 
