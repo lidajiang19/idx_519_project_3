@@ -17,14 +17,14 @@ async function initMap() {
   })
 
 //   // The marker, positioned at Uluru
-//   const marker = new AdvancedMarkerView({
-//     map: map,
-//     position: position,
-//     title: 'Chicago',
-//   })
-// }
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: 'Chicago',
+  })
+}
 
-// initMap()
+initMap()
 
 //Add pic marker
 //developers.google.com/maps/documentation/javascript/examples/icon-simple
@@ -42,7 +42,7 @@ function initMap() {
 }
 
 //styled map selection
-let map
+// let map
 
 function initMap() {
   // Create the map with no initial style specified.
@@ -372,4 +372,4 @@ function initMap() {
   bikeLayer.setMap(map)
 }
 
-window.initMap = initMap }
+window.initMap = initMap 
