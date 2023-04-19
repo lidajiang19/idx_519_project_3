@@ -24,7 +24,7 @@ async function initMap() {
   })
 }
 
-initMap()
+// initMap()
 
 //Add pic marker
 //developers.google.com/maps/documentation/javascript/examples/icon-simple
@@ -372,4 +372,4 @@ function initMap() {
   bikeLayer.setMap(map)
 }
 
-window.initMap = initMap 
+window.initMap = initMap
