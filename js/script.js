@@ -3,7 +3,7 @@ let map
 
 async function initMap() {
   // The location of Chicago
-  const position = { lat: 41.8781, lng: 87.6298 }
+  const position = { lat: 41.8781, lng: -87.6298 }
   // Request needed libraries.
   //@ts-ignore
   const { Map } = await google.maps.importLibrary('maps')
