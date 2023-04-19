@@ -85,7 +85,7 @@ video {
   margin-right: auto; */
   max-width: 50%;
   height: auto;
-  float: block;
+  /* float: block; */
 }
 
 h1,h2,h3,h4,body{
