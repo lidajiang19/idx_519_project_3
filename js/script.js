@@ -25,7 +25,7 @@ async function initMap() {
 }
 
 // initMap()
-
+//https://developers.google.com/maps/documentation/javascript/examples/layer-bicycling
 //Add pic marker
 //developers.google.com/maps/documentation/javascript/examples/icon-simple
 function initMap() {
