@@ -25,20 +25,20 @@ async function initMap() {
 }
 
 
-//Add pic marker
-//developers.google.com/maps/documentation/javascript/examples/icon-simple
-// function initMap() {
-//   const map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 4,
-//     center: { lat: 41.8781, lng: -87.6298 },
-//   })
-//   const image = 'media/giphy.gif'
-//   const beachMarker = new google.maps.Marker({
-//     position: { lat: 41.8781, lng: -87.6298 },
-//     map,
-//     icon: image,
-//   })
-// }
+// Add pic marker
+// developers.google.com/maps/documentation/javascript/examples/icon-simple
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: { lat: 41.8781, lng: -87.6298 },
+  })
+  const image = 'media/giphy.gif'
+  const beachMarker = new google.maps.Marker({
+    position: { lat: 41.8781, lng: -87.6298 },
+    map,
+    icon: image,
+  })
+}
 
 // //styled map selection
 // // let map
