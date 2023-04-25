@@ -24,7 +24,6 @@ async function initMap() {
   })
 }
 
-initMap()
 
 //Add pic marker
 //developers.google.com/maps/documentation/javascript/examples/icon-simple
