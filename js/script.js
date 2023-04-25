@@ -56,7 +56,7 @@ function initMap() {
 
 //get lat/lng from click events
 function initMap() {
-  const myLatlng = { lat: -25.363, lng: 131.044 }
+  const myLatlng = { lat: 41.8781, lng: -87.6298 }
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: myLatlng,
@@ -81,6 +81,17 @@ function initMap() {
     )
     infoWindow.open(map)
   })
+}
+
+//bike layer
+function initMap() {
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 14,
+    center: { lat: 41.8781, lng: -87.6298 },
+  })
+  const bikeLayer = new google.maps.BicyclingLayer()
+
+  bikeLayer.setMap(map)
 }
 
 window.initMap = initMap
