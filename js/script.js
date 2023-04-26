@@ -32,7 +32,7 @@ function initMap() {
     zoom: 4,
     center: { lat: 41.8781, lng: -87.6298 },
   })
-  const image = "media/giphy.gif"
+  const image = "https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/705e9c1633b417e.png"
   const beachMarker = new google.maps.Marker({
     position: { lat: 41.8781, lng: -87.6298 },
     map,
