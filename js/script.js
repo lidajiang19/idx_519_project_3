@@ -24,6 +24,21 @@ async function initMap() {
 //   })
 // }
 
+//Add simple marker
+function initMap() {
+  const myLatLng = { lat: 41.8781, lng: -87.6298 }
+  const map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: myLatLng,
+  })
+
+  new google.maps.Marker({
+    position: myLatLng,
+    map,
+    title: 'Hello World!',
+  })
+}
+
 
 // Add pic marker
 // developers.google.com/maps/documentation/javascript/examples/icon-simple
@@ -43,16 +58,16 @@ function initMap() {
 // //styled map selection
 // // let map
 
-function initMap() {
-  // Create the map with no initial style specified.
-  // It therefore has default styling.
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: -33.86, lng: 151.209 },
-    zoom: 13,
-    mapTypeControl: false,
-  })
+// function initMap() {
+//   // Create the map with no initial style specified.
+//   // It therefore has default styling.
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: { lat: -33.86, lng: 151.209 },
+//     zoom: 13,
+//     mapTypeControl: false,
+//   })
 
-}
+// }
 
 //get lat/lng from click events
 function initMap() {
