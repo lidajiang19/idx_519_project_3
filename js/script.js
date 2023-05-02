@@ -20,6 +20,7 @@ async function initMap() {
 //   // The marker, positioned at Uluru
 
 //Add simple marker
+
 // function initMap() {
 //   const myLatLng = { lat: 41.8781, lng: -87.6298 }
 //   const map = new google.maps.Map(document.getElementById('map'), {
@@ -54,18 +55,18 @@ let marker = new google.maps.Marker({
 
 // Add pic marker
 // developers.google.com/maps/documentation/javascript/examples/icon-simple
-function initMap() {
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: { lat: 41.8781, lng: -87.6298 },
-  })
-  const image = "https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/705e9c1633b417e.png"
-  const beachMarker = new google.maps.Marker({
-    position: { lat: 41.8781, lng: -87.6298 },
-    map,
-    icon: image,
-  })
-}
+// function initMap() {
+//   const map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 4,
+//     center: { lat: 41.8781, lng: -87.6298 },
+//   })
+//   const image = "https://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/705e9c1633b417e.png"
+//   const beachMarker = new google.maps.Marker({
+//     position: { lat: 41.8781, lng: -87.6298 },
+//     map,
+//     icon: image,
+//   })
+// }
 
 // //styled map selection
 // // let map
@@ -82,33 +83,45 @@ function initMap() {
 // }
 
 //get lat/lng from click events
-function initMap() {
-  const myLatlng = { lat: 41.8781, lng: -87.6298 }
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: myLatlng,
-  })
-  // Create the initial InfoWindow.
-  let infoWindow = new google.maps.InfoWindow({
-    content: 'Click the map to get Lat/Lng!',
-    position: myLatlng,
-  })
+// function initMap() {
+//   const myLatlng = { lat: 41.8781, lng: -87.6298 }
+//   const map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 4,
+//     center: myLatlng,
+//   })
+//   // Create the initial InfoWindow.
+//   let infoWindow = new google.maps.InfoWindow({
+//     content: 'Click the map to get Lat/Lng!',
+//     position: myLatlng,
+//   })
 
-  infoWindow.open(map)
-  // Configure the click listener.
-  map.addListener('click', (mapsMouseEvent) => {
-    // Close the current InfoWindow.
-    infoWindow.close()
-    // Create a new InfoWindow.
-    infoWindow = new google.maps.InfoWindow({
-      position: mapsMouseEvent.latLng,
-    })
-    infoWindow.setContent(
-      JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2),
-    )
-    infoWindow.open(map)
+//   infoWindow.open(map)
+//   // Configure the click listener.
+//   map.addListener('click', (mapsMouseEvent) => {
+//     // Close the current InfoWindow.
+//     infoWindow.close()
+//     // Create a new InfoWindow.
+//     infoWindow = new google.maps.InfoWindow({
+//       position: mapsMouseEvent.latLng,
+//     })
+//     infoWindow.setContent(
+//       JSON.stringify(mapsMouseEvent.latLng.toJSON(), null, 2),
+//     )
+//     infoWindow.open(map)
+//   })
+// }
+
+map.addListener('click', (event) => {
+  // Get the clicked location's latitude and longitude
+  let clickedLat = event.latLng.lat()
+  let clickedLng = event.latLng.lng()
+
+  // Create a new marker at the clicked location
+  let marker = new google.maps.Marker({
+    position: { lat: clickedLat, lng: clickedLng },
+    map: map,
   })
-}
+})
 
 //bike layer
 function initMap() {
