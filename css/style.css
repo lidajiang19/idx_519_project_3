@@ -172,6 +172,9 @@ p{
   height:800px;
   width: 100%;
 }
+#map h3{
+  text-align: center;
+}
 
 /* media query for screens */
 @media only screen and (min-width: 1024px) and (max-width: 1728px) {
