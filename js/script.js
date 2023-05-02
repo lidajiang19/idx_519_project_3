@@ -1,5 +1,5 @@
 // // Initialize and add the map
-// let map;
+let map;
 // let marker;
 
 async function initMap() {
@@ -38,7 +38,7 @@ async function initMap() {
 let markerPosition = { lat: 41.8781, lng: -87.6298 };
 
 // Create a new map instance
-let map = new google.maps.Map(document.getElementById("map"), {
+let newMap = new google.maps.Map(document.getElementById("map"), {
   center: markerPosition,
   zoom: 12
 });
