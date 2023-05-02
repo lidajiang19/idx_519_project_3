@@ -1,5 +1,6 @@
 // // Initialize and add the map
-let map
+let map;
+let marker;
 
 async function initMap() {
   // The location of Chicago
@@ -17,12 +18,6 @@ async function initMap() {
   })
 }
 //   // The marker, positioned at Uluru
-//   const marker = new AdvancedMarkerView({
-//     map: map,
-//     position: position,
-//     title: 'Chicago',
-//   })
-// }
 
 //Add simple marker
 function initMap() {
