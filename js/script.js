@@ -20,19 +20,36 @@ async function initMap() {
 //   // The marker, positioned at Uluru
 
 //Add simple marker
-function initMap() {
-  const myLatLng = { lat: 41.8781, lng: -87.6298 }
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: myLatLng,
-  })
+// function initMap() {
+//   const myLatLng = { lat: 41.8781, lng: -87.6298 }
+//   const map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 4,
+//     center: myLatLng,
+//   })
 
-  new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: 'Hello World!',
-  })
-}
+//   new google.maps.Marker({
+//     position: myLatLng,
+//     map,
+//     title: 'Hello World!',
+//   })
+// }
+
+// Define the coordinates of the marker
+var markerPosition = { lat: 41.8781, lng: -87.6298 };
+
+// Create a new map instance
+var map = new google.maps.Map(document.getElementById("map"), {
+  center: markerPosition,
+  zoom: 12
+});
+
+// Create a new marker instance
+var marker = new google.maps.Marker({
+  position: markerPosition,
+  map: map,
+  title: "Chicago"
+});
+
 
 
 // Add pic marker
