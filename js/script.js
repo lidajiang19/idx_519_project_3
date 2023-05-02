@@ -1,6 +1,6 @@
 // // Initialize and add the map
-let map;
-let marker;
+// let map;
+// let marker;
 
 async function initMap() {
   // The location of Chicago
@@ -35,16 +35,16 @@ async function initMap() {
 // }
 
 // Define the coordinates of the marker
-var markerPosition = { lat: 41.8781, lng: -87.6298 };
+let markerPosition = { lat: 41.8781, lng: -87.6298 };
 
 // Create a new map instance
-var map = new google.maps.Map(document.getElementById("map"), {
+let map = new google.maps.Map(document.getElementById("map"), {
   center: markerPosition,
   zoom: 12
 });
 
 // Create a new marker instance
-var marker = new google.maps.Marker({
+let marker = new google.maps.Marker({
   position: markerPosition,
   map: map,
   title: "Chicago"
