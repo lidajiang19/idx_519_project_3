@@ -169,6 +169,64 @@ p{
 }
 
 #map {
-  height: 400px;
+  height:800px;
   width: 100%;
+}
+
+/* media query for screens */
+@media only screen and (min-width: 1024px) and (max-width: 1728px) {
+  p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+  }
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size:26px;
+  }
+  h3{
+    font-size:22px;
+  }
+  h4{
+    font-size:20px;
+  }
+  nav li{
+    font-size:26px;
+  }
+  ul li{
+    font-size:18px;
+  }
+  video {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  }
+  .profile{
+  height: auto;
+  max-width: 50%;
+  border-radius: 4px;
+  display: block;
+  float:left;
+  }
+  .campus{
+  height: auto;
+  max-width: 50%;
+  border-radius: 4px;
+  display: block;
+  float:left;
+  }
+  .cats{
+    height: auto;
+    max-width: 50%;
+    border-radius: 4px;
+    display: block;
+    float:left;
+  }
+
+}
+
+/* media query for smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
 }
